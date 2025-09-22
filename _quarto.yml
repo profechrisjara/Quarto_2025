@@ -18,6 +18,14 @@ format:
     theme:
       - cosmo
       - brand
+
+publish:
+type: gitHub
+method: branch
+repository: https://github.com/profechrisjara/Quarto_2025.git
+branch: gh-pages
+pre-render: true
+
   pdf:
     documentclass: scrreprt
 
