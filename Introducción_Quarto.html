@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Introduction – QUARTO_2025</title>
+<title>1&nbsp; Introducción a Quarto – QUARTO_2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -103,7 +83,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Introducción_Quarto.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a Quarto</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -133,13 +113,13 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">Prefacio</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  <a href="./Introducción_Quarto.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a Quarto</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -159,15 +139,42 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#usos-principales-de-quarto" id="toc-usos-principales-de-quarto" class="nav-link active" data-scroll-target="#usos-principales-de-quarto"><span class="header-section-number">2</span> Usos Principales de Quarto</a></li>
+  <li><a href="#creación-de-un-proyecto-de-tipo-libro-con-quarto" id="toc-creación-de-un-proyecto-de-tipo-libro-con-quarto" class="nav-link" data-scroll-target="#creación-de-un-proyecto-de-tipo-libro-con-quarto"><span class="header-section-number">3</span> Creación de un Proyecto de Tipo Libro con Quarto</a>
+  <ul class="collapse">
+  <li><a href="#pasos-para-crear-un-nuevo-proyecto-libro-en-visual-studio-code" id="toc-pasos-para-crear-un-nuevo-proyecto-libro-en-visual-studio-code" class="nav-link" data-scroll-target="#pasos-para-crear-un-nuevo-proyecto-libro-en-visual-studio-code"><span class="header-section-number">3.1</span> Pasos para crear un nuevo proyecto libro en Visual Studio Code</a></li>
+  <li><a href="#estructura-básica-del-archivo-_quarto.yml-del-libro" id="toc-estructura-básica-del-archivo-_quarto.yml-del-libro" class="nav-link" data-scroll-target="#estructura-básica-del-archivo-_quarto.yml-del-libro"><span class="header-section-number">3.2</span> Estructura básica del archivo <code>_quarto.yml</code> del libro</a></li>
+  </ul></li>
+  <li><a href="#agregar-el-repositorio-remoto-en-git" id="toc-agregar-el-repositorio-remoto-en-git" class="nav-link" data-scroll-target="#agregar-el-repositorio-remoto-en-git"><span class="header-section-number">4</span> Agregar el Repositorio Remoto en Git</a>
+  <ul class="collapse">
+  <li><a href="#comando-para-agregar-el-repositorio-remoto" id="toc-comando-para-agregar-el-repositorio-remoto" class="nav-link" data-scroll-target="#comando-para-agregar-el-repositorio-remoto"><span class="header-section-number">4.1</span> Comando para agregar el repositorio remoto</a></li>
+  <li><a href="#verificar-el-remoto-agregado" id="toc-verificar-el-remoto-agregado" class="nav-link" data-scroll-target="#verificar-el-remoto-agregado"><span class="header-section-number">4.2</span> Verificar el remoto agregado</a></li>
+  </ul></li>
+  <li><a href="#publicación-automática-en-github-pages-con-quarto" id="toc-publicación-automática-en-github-pages-con-quarto" class="nav-link" data-scroll-target="#publicación-automática-en-github-pages-con-quarto"><span class="header-section-number">5</span> Publicación Automática en GitHub Pages con Quarto</a>
+  <ul class="collapse">
+  <li><a href="#configuración-para-publicar-en-github-pages-desde-_quarto.yml" id="toc-configuración-para-publicar-en-github-pages-desde-_quarto.yml" class="nav-link" data-scroll-target="#configuración-para-publicar-en-github-pages-desde-_quarto.yml"><span class="header-section-number">5.1</span> Configuración para publicar en GitHub Pages desde <code>_quarto.yml</code></a></li>
+  <li><a href="#pasos-para-publicar-el-libro-en-github-pages" id="toc-pasos-para-publicar-el-libro-en-github-pages" class="nav-link" data-scroll-target="#pasos-para-publicar-el-libro-en-github-pages"><span class="header-section-number">5.2</span> Pasos para publicar el libro en GitHub Pages</a></li>
+  </ul></li>
+  <li><a href="#sincronización-del-proyecto-local-con-el-repositorio-en-github" id="toc-sincronización-del-proyecto-local-con-el-repositorio-en-github" class="nav-link" data-scroll-target="#sincronización-del-proyecto-local-con-el-repositorio-en-github"><span class="header-section-number">6</span> Sincronización del Proyecto Local con el Repositorio en GitHub</a>
+  <ul class="collapse">
+  <li><a href="#pasos-para-sincronizar-la-copia-local-con-github-usando-git" id="toc-pasos-para-sincronizar-la-copia-local-con-github-usando-git" class="nav-link" data-scroll-target="#pasos-para-sincronizar-la-copia-local-con-github-usando-git"><span class="header-section-number">6.1</span> Pasos para sincronizar la copia local con GitHub usando Git</a></li>
+  </ul></li>
+  <li><a href="#buenas-prácticas-y-recomendaciones" id="toc-buenas-prácticas-y-recomendaciones" class="nav-link" data-scroll-target="#buenas-prácticas-y-recomendaciones"><span class="header-section-number">7</span> Buenas Prácticas y Recomendaciones</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias"><span class="header-section-number">8</span> Referencias</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introducción a Quarto</span></h1>
 </div>
 
 
@@ -184,15 +191,225 @@ div.csl-indent {
 </header>
 
 
-<p>This is a book created from markdown and executable code.</p>
-<p>See <span class="citation" data-cites="knuth84">Knuth (<a href="references.html#ref-knuth84" role="doc-biblioref">1984</a>)</span> for additional discussion of literate programming.</p>
+<p>Quarto es un sistema moderno y versátil para la creación de documentos técnicos y científicos, que permite integrar texto, código y resultados de análisis en un solo flujo reproducible. Está diseñado para soportar múltiples lenguajes de programación como R, Python, Julia y Observable JavaScript, y se utiliza ampliamente para elaborar reportes, libros, presentaciones, blogs y sitios web académicos o profesionales.</p>
+<p>El sistema aprovecha la sintaxis Markdown enriquecida y extiende sus capacidades para incluir gráficos, ecuaciones en LaTeX, diagramas, tablas, y fragmentos de código ejecutables, brindando un entorno ideal para documentar proyectos científicos, educativos y de software con alta calidad.</p>
+<hr>
+<section id="usos-principales-de-quarto" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Usos Principales de Quarto</h1>
+<ul>
+<li><strong>Documentación reproducible:</strong> Integración directa de código y resultados con la narrativa texto.<br>
+</li>
+<li><strong>Publicaciones académicas:</strong> Creación de artículos científicos o tesis con soporte para referencias y formatos estándar.<br>
+</li>
+<li><strong>Libros técnicos:</strong> Unificación de múltiples capítulos, manejo de bibliografía, tablas de contenido y referencias cruzadas.<br>
+</li>
+<li><strong>Sitios web y blogs:</strong> Publicación multimedia con facilidades para estilos, temas y desplegado en servidores o GitHub Pages.<br>
+</li>
+<li><strong>Presentaciones interactivas:</strong> Creación de diapositivas con código incrustado y visualizaciones.</li>
+</ul>
+<hr>
+</section>
+<section id="creación-de-un-proyecto-de-tipo-libro-con-quarto" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Creación de un Proyecto de Tipo Libro con Quarto</h1>
+<p>Un proyecto libro en Quarto es una colección organizada de documentos (<em>.qmd</em>), cada uno representando capítulos o secciones, que se compila en un único manuscrito con múltiples formatos de salida (HTML, PDF, EPUB, entre otros).</p>
+<section id="pasos-para-crear-un-nuevo-proyecto-libro-en-visual-studio-code" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="pasos-para-crear-un-nuevo-proyecto-libro-en-visual-studio-code"><span class="header-section-number">3.1</span> Pasos para crear un nuevo proyecto libro en Visual Studio Code</h2>
+<ol type="1">
+<li><p><strong>Abrir Visual Studio Code (VS Code).</strong></p></li>
+<li><p><strong>Abrir la terminal de comandos</strong></p>
+<ul>
+<li><p>Presionar <code>Ctrl + P</code> (o <code>Cmd + P</code> Mac) y ejecutar el comando:</p>
+<pre><code>Quarto: Create Project</code></pre></li>
+</ul></li>
+<li><p><strong>Seleccionar el tipo de proyecto</strong></p>
+<ul>
+<li><p>Elegir la opción:</p>
+<pre><code>Book Project</code></pre></li>
+</ul></li>
+<li><p><strong>Seleccionar la carpeta donde se creará el proyecto</strong></p>
+<ul>
+<li>Navegar a la ruta deseada en tu sistema de archivos.</li>
+</ul></li>
+<li><p><strong>Nombrar la carpeta del proyecto</strong></p>
+<ul>
+<li>Ejemplo: <code>SistemasOperativos_Tercero</code>.</li>
+</ul></li>
+<li><p><strong>Quarto generará automáticamente la estructura base del libro</strong>, que incluye:</p>
+<ul>
+<li>Archivos esenciales:
+<ul>
+<li><code>_quarto.yml</code> (configuración general del libro).<br>
+</li>
+<li><code>index.qmd</code> (página principal o portada).<br>
+</li>
+<li>Otros capítulos predefinidos (<code>intro.qmd</code>, <code>summary.qmd</code>, etc.)<br>
+</li>
+</ul></li>
+<li>Directorios para recursos auxiliares (imágenes, referencias bibliográficas).</li>
+</ul></li>
+</ol>
+</section>
+<section id="estructura-básica-del-archivo-_quarto.yml-del-libro" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="estructura-básica-del-archivo-_quarto.yml-del-libro"><span class="header-section-number">3.2</span> Estructura básica del archivo <code>_quarto.yml</code> del libro</h2>
+<p>project: type: book</p>
+<p>book: title: “Sistemas Operativos - Segundo Nivel” author: “Profe Chris Jara” date: “2025-09-22” chapters: - index.qmd - intro.qmd - chapter1.qmd - summary.qmd bibliography: references.bib</p>
+<p>format: html: theme: cosmo toc: true pdf: documentclass: scrreprt</p>
+<p>Este archivo controla desde el título y autor hasta el orden y contenido del libro, así como los formatos de salida y su apariencia.</p>
+<hr>
+</section>
+</section>
+<section id="agregar-el-repositorio-remoto-en-git" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Agregar el Repositorio Remoto en Git</h1>
+<p>Antes de sincronizar tu proyecto local con GitHub, es necesario vincular el repositorio remoto con el proyecto local usando Git.</p>
+<section id="comando-para-agregar-el-repositorio-remoto" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="comando-para-agregar-el-repositorio-remoto"><span class="header-section-number">4.1</span> Comando para agregar el repositorio remoto</h2>
+<p>Desde la terminal integrada en VS Code, estando en la carpeta raíz del proyecto, ejecuta:</p>
+<p>git remote add origin https://github.com/profechrisjara/SistemasOperativos_Tercero.git</p>
+<ul>
+<li><code>origin</code> es el nombre convencional para el repositorio remoto principal.<br>
+</li>
+<li>La URL debe corresponder al repositorio creado en GitHub donde deseas subir tu proyecto.</li>
+</ul>
+</section>
+<section id="verificar-el-remoto-agregado" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="verificar-el-remoto-agregado"><span class="header-section-number">4.2</span> Verificar el remoto agregado</h2>
+<p>Para confirmar que el control remoto fue agregado correctamente, usa:</p>
+<pre><code>git remote -v</code></pre>
+<p>Debería mostrar algo similar a:</p>
+<pre><code>origin https://github.com/profechrisjara/SistemasOperativos_Tercero.git (fetch)
+origin https://github.com/profechrisjara/SistemasOperativos_Tercero.git (push)</code></pre>
+<hr>
+</section>
+</section>
+<section id="publicación-automática-en-github-pages-con-quarto" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Publicación Automática en GitHub Pages con Quarto</h1>
+<p>Quarto permite automatizar la publicación del libro directamente en GitHub Pages, facilitando que el contenido generado en HTML esté disponible en la web con solo un comando.</p>
+<section id="configuración-para-publicar-en-github-pages-desde-_quarto.yml" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="configuración-para-publicar-en-github-pages-desde-_quarto.yml"><span class="header-section-number">5.1</span> Configuración para publicar en GitHub Pages desde <code>_quarto.yml</code></h2>
+<pre><code>publish:
+    type: gitHub
+    method: branch
+    repository: https://github.com/profechrisjara/SistemasOperativos_Tercero.git
+    branch: gh-pages
+    pre-render: true</code></pre>
+<ul>
+<li><code>type: gitHub</code> indica que se publicará en GitHub.<br>
+</li>
+<li><code>method: branch</code> usa un branch dedicado (<code>gh-pages</code>) para la publicación web.<br>
+</li>
+<li><code>repository</code> es el repositorio remoto en GitHub donde se publicará el contenido.<br>
+</li>
+<li><code>branch</code> especifica la rama donde se despliega la página.<br>
+</li>
+<li><code>pre-render: true</code> indica que Quarto debe renderizar el contenido automáticamente antes de publicar.</li>
+</ul>
+</section>
+<section id="pasos-para-publicar-el-libro-en-github-pages" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="pasos-para-publicar-el-libro-en-github-pages"><span class="header-section-number">5.2</span> Pasos para publicar el libro en GitHub Pages</h2>
+<ol type="1">
+<li><strong>Asegúrate de estar en la carpeta raíz del proyecto:</strong></li>
+</ol>
+<pre><code>cd /ruta/a/SistemasOperativos_Tercero</code></pre>
+<ol start="2" type="1">
+<li><strong>Ejecuta el comando de publicación de Quarto:</strong></li>
+</ol>
+<pre><code>quarto publish</code></pre>
+<ol start="3" type="1">
+<li><p>Quarto renderiza el libro y sincroniza la carpeta generada (<code>_book/</code>) con la rama <code>gh-pages</code> del repositorio remoto.</p></li>
+<li><p>Configura GitHub Pages en el repositorio:<br>
+</p></li>
+</ol>
+<ul>
+<li>En GitHub, accede a <strong>Settings &gt; Pages</strong>.<br>
+</li>
+<li>Selecciona como fuente la rama <code>gh-pages</code>.<br>
+</li>
+<li>Guarda la configuración para que el sitio quede publicado.</li>
+</ul>
+<ol start="5" type="1">
+<li>La URL pública suele ser:</li>
+</ol>
+<pre><code>https://profechrisjara.github.io/SistemasOperativos_Tercero/</code></pre>
+<hr>
+</section>
+</section>
+<section id="sincronización-del-proyecto-local-con-el-repositorio-en-github" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Sincronización del Proyecto Local con el Repositorio en GitHub</h1>
+<p>Mantener sincronizado un proyecto local de Quarto con su repositorio remoto en GitHub es fundamental para asegurar que los cambios realizados localmente se reflejen en el repositorio en línea y que los cambios remotos, si los hubiera, se integren correctamente en el entorno de trabajo local.</p>
+<section id="pasos-para-sincronizar-la-copia-local-con-github-usando-git" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="pasos-para-sincronizar-la-copia-local-con-github-usando-git"><span class="header-section-number">6.1</span> Pasos para sincronizar la copia local con GitHub usando Git</h2>
+<ol type="1">
+<li><strong>Abrir la terminal integrada de VS Code</strong> y navegar a la carpeta raíz de tu proyecto:</li>
+</ol>
+<pre><code>cd /ruta/a/SistemasOperativos_Tercero</code></pre>
+<ol start="2" type="1">
+<li><strong>Agregar el repositorio remoto (si no está agregado):</strong></li>
+</ol>
+<pre><code>git remote add origin https://github.com/profechrisjara/SistemasOperativos_Tercero.git</code></pre>
+<blockquote class="blockquote">
+<p>Nota: Si aparece el mensaje de error <code>fatal: remote origin already exists.</code>, usa</p>
+<pre><code>git remote set-url origin https://github.com/profechrisjara/SistemasOperativos_Tercero.git</code></pre>
+<p>para actualizar la URL del remoto.</p>
+</blockquote>
+<ol start="3" type="1">
+<li><strong>Agregar cambios al área de preparación (stage):</strong></li>
+</ol>
+<pre><code>git add .</code></pre>
+<p>Esto recoge todos los archivos modificados y nuevos para incluirlos en el próximo commit.</p>
+<ol start="4" type="1">
+<li><strong>Crear un commit con un mensaje descriptivo:</strong></li>
+</ol>
+<pre><code>git commit -m "Descripción breve de los cambios"</code></pre>
+<p>Esto guarda los cambios localmente en el historial de Git.</p>
+<ol start="5" type="1">
+<li><strong>Enviar los cambios al repositorio remoto (GitHub):</strong></li>
+</ol>
+<pre><code>git push -u origin main</code></pre>
+<ul>
+<li>Si la rama principal local se llama <code>master</code>, cambiar <code>main</code> por <code>master</code>.</li>
+</ul>
+<ol start="6" type="1">
+<li><strong>Actualizar los cambios realizados en el repositorio remoto al entorno local:</strong><br>
+Para traer cambios realizados por otros colaboradores o desde GitHub:</li>
+</ol>
+<pre><code>git pull origin main</code></pre>
+<ol start="7" type="1">
+<li><strong>Verificar el repositorio remoto configurado:</strong><br>
+Para asegurarte que tu proyecto local está apuntando al repositorio correcto:</li>
+</ol>
+<pre><code>git remote -v</code></pre>
+<hr>
+</section>
+</section>
+<section id="buenas-prácticas-y-recomendaciones" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Buenas Prácticas y Recomendaciones</h1>
+<ul>
+<li>Realizar commits con mensajes claros y frecuentes para facilitar el seguimiento de cambios.<br>
+</li>
+<li>Sincronizar periódicamente con el repositorio remoto para evitar conflictos.<br>
+</li>
+<li>Configurar autenticación con token personal (PAT) o clave SSH para operaciones push/pull seguras.<br>
+</li>
+<li>Aprovechar la previsualización y el render automático de Quarto para validación antes de publicar o subir.</li>
+</ul>
+<hr>
+</section>
+<section id="referencias" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Referencias</h1>
+<ul>
+<li>Documentación oficial de Quarto: <a href="https://quarto.org/docs/books/">https://quarto.org/docs/books/</a><br>
+</li>
+<li>Publicación en GitHub Pages con Quarto: <a href="https://quarto.org/docs/publishing/github-pages">https://quarto.org/docs/publishing/github-pages/</a><br>
+</li>
+<li>Git - Comandos para gestión de remotos: <a href="https://docs.github.com/en/get-started/git-basics/managing-remote-repositories">https://docs.github.com/en/get-started/git-basics/managing-remote-repositories</a><br>
+</li>
+<li>GitHub Docs - Sincronización de ramas: <a href="https://docs.github.com/en/github/using-git/syncing-a-fork">https://docs.github.com/en/github/using-git/syncing-a-fork</a></li>
+</ul>
+<hr>
+<p>Este manual reúne desde conceptos básicos hasta aspectos técnicos precisos para crear, gestionar y publicar proyectos documentales con Quarto, integrando el uso de Git para control de versiones y la publicación eficiente en GitHub Pages.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-knuth84" class="csl-entry" role="listitem">
-Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
-</div>
-</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -597,8 +814,8 @@ Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Preface">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="./index.html" class="pagination-link" aria-label="Prefacio">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Prefacio</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

@@ -4,19 +4,89 @@
     "href": "index.html",
     "title": "QUARTO_2025",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "text": "Prefacio\nEste manual ha sido creado con el propósito de proporcionar una guía integral, técnica y detallada sobre el uso de Quarto, una tecnología emergente y poderosa para la creación de documentos científicos, técnicos y educativos de alta calidad. Está dirigido a desarrolladores, investigadores, educadores y profesionales del área de la documentación técnica que busquen optimizar la generación, gestión y publicación de sus contenidos.\nEn las páginas siguientes se exploran los fundamentos de Quarto: qué es, para qué se usa y cuáles son sus principales ventajas en la producción de textos reproducibles e interactivos. Se ofrece una explicación técnica formal orientada a la creación de proyectos de tipo libro, con un enfoque metodológico que abarca desde la estructura inicial en Visual Studio Code hasta la publicación automática en GitHub Pages, facilitando así la diseminación eficiente y profesional de la información.\nEste manual también aborda la integración esencial con sistemas de control de versiones mediante Git y GitHub, enfatizando el procedimiento para sincronizar el repositorio local con el repositorio remoto, un paso clave para el mantenimiento y colaboración en proyectos modernos.\nLa intención es que esta obra sirva tanto como material de referencia para principiantes que se inician en Quarto, como para usuarios avanzados que buscan automatizar y perfeccionar sus flujos de trabajo de documentación técnica.\nFinalmente, se invita al lector a explorar y aplicar los contenidos aquí expuestos, con la confianza de que facilitarán un enfoque profesional y actualizado en la elaboración y publicación de materiales técnicos en el ámbito académico, empresarial o científico.\n\nProfe Chris Jara\nCuenca, Ecuador\nDocente de Informática",
     "crumbs": [
-      "Preface"
+      "Prefacio"
     ]
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "1  Introduction",
+    "objectID": "Introducción_Quarto.html",
+    "href": "Introducción_Quarto.html",
+    "title": "1  Introducción a Quarto",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "2 Usos Principales de Quarto\nQuarto es un sistema moderno y versátil para la creación de documentos técnicos y científicos, que permite integrar texto, código y resultados de análisis en un solo flujo reproducible. Está diseñado para soportar múltiples lenguajes de programación como R, Python, Julia y Observable JavaScript, y se utiliza ampliamente para elaborar reportes, libros, presentaciones, blogs y sitios web académicos o profesionales.\nEl sistema aprovecha la sintaxis Markdown enriquecida y extiende sus capacidades para incluir gráficos, ecuaciones en LaTeX, diagramas, tablas, y fragmentos de código ejecutables, brindando un entorno ideal para documentar proyectos científicos, educativos y de software con alta calidad.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Introducción_Quarto.html#pasos-para-crear-un-nuevo-proyecto-libro-en-visual-studio-code",
+    "href": "Introducción_Quarto.html#pasos-para-crear-un-nuevo-proyecto-libro-en-visual-studio-code",
+    "title": "1  Introducción a Quarto",
+    "section": "3.1 Pasos para crear un nuevo proyecto libro en Visual Studio Code",
+    "text": "3.1 Pasos para crear un nuevo proyecto libro en Visual Studio Code\n\nAbrir Visual Studio Code (VS Code).\nAbrir la terminal de comandos\n\nPresionar Ctrl + P (o Cmd + P Mac) y ejecutar el comando:\nQuarto: Create Project\n\nSeleccionar el tipo de proyecto\n\nElegir la opción:\nBook Project\n\nSeleccionar la carpeta donde se creará el proyecto\n\nNavegar a la ruta deseada en tu sistema de archivos.\n\nNombrar la carpeta del proyecto\n\nEjemplo: SistemasOperativos_Tercero.\n\nQuarto generará automáticamente la estructura base del libro, que incluye:\n\nArchivos esenciales:\n\n_quarto.yml (configuración general del libro).\n\nindex.qmd (página principal o portada).\n\nOtros capítulos predefinidos (intro.qmd, summary.qmd, etc.)\n\n\nDirectorios para recursos auxiliares (imágenes, referencias bibliográficas).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Introducción_Quarto.html#estructura-básica-del-archivo-_quarto.yml-del-libro",
+    "href": "Introducción_Quarto.html#estructura-básica-del-archivo-_quarto.yml-del-libro",
+    "title": "1  Introducción a Quarto",
+    "section": "3.2 Estructura básica del archivo _quarto.yml del libro",
+    "text": "3.2 Estructura básica del archivo _quarto.yml del libro\nproject: type: book\nbook: title: “Sistemas Operativos - Segundo Nivel” author: “Profe Chris Jara” date: “2025-09-22” chapters: - index.qmd - intro.qmd - chapter1.qmd - summary.qmd bibliography: references.bib\nformat: html: theme: cosmo toc: true pdf: documentclass: scrreprt\nEste archivo controla desde el título y autor hasta el orden y contenido del libro, así como los formatos de salida y su apariencia.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Introducción_Quarto.html#comando-para-agregar-el-repositorio-remoto",
+    "href": "Introducción_Quarto.html#comando-para-agregar-el-repositorio-remoto",
+    "title": "1  Introducción a Quarto",
+    "section": "4.1 Comando para agregar el repositorio remoto",
+    "text": "4.1 Comando para agregar el repositorio remoto\nDesde la terminal integrada en VS Code, estando en la carpeta raíz del proyecto, ejecuta:\ngit remote add origin https://github.com/profechrisjara/SistemasOperativos_Tercero.git\n\norigin es el nombre convencional para el repositorio remoto principal.\n\nLa URL debe corresponder al repositorio creado en GitHub donde deseas subir tu proyecto.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Introducción_Quarto.html#verificar-el-remoto-agregado",
+    "href": "Introducción_Quarto.html#verificar-el-remoto-agregado",
+    "title": "1  Introducción a Quarto",
+    "section": "4.2 Verificar el remoto agregado",
+    "text": "4.2 Verificar el remoto agregado\nPara confirmar que el control remoto fue agregado correctamente, usa:\ngit remote -v\nDebería mostrar algo similar a:\norigin https://github.com/profechrisjara/SistemasOperativos_Tercero.git (fetch)\norigin https://github.com/profechrisjara/SistemasOperativos_Tercero.git (push)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Introducción_Quarto.html#configuración-para-publicar-en-github-pages-desde-_quarto.yml",
+    "href": "Introducción_Quarto.html#configuración-para-publicar-en-github-pages-desde-_quarto.yml",
+    "title": "1  Introducción a Quarto",
+    "section": "5.1 Configuración para publicar en GitHub Pages desde _quarto.yml",
+    "text": "5.1 Configuración para publicar en GitHub Pages desde _quarto.yml\npublish:\n    type: gitHub\n    method: branch\n    repository: https://github.com/profechrisjara/SistemasOperativos_Tercero.git\n    branch: gh-pages\n    pre-render: true\n\ntype: gitHub indica que se publicará en GitHub.\n\nmethod: branch usa un branch dedicado (gh-pages) para la publicación web.\n\nrepository es el repositorio remoto en GitHub donde se publicará el contenido.\n\nbranch especifica la rama donde se despliega la página.\n\npre-render: true indica que Quarto debe renderizar el contenido automáticamente antes de publicar.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Introducción_Quarto.html#pasos-para-publicar-el-libro-en-github-pages",
+    "href": "Introducción_Quarto.html#pasos-para-publicar-el-libro-en-github-pages",
+    "title": "1  Introducción a Quarto",
+    "section": "5.2 Pasos para publicar el libro en GitHub Pages",
+    "text": "5.2 Pasos para publicar el libro en GitHub Pages\n\nAsegúrate de estar en la carpeta raíz del proyecto:\n\ncd /ruta/a/SistemasOperativos_Tercero\n\nEjecuta el comando de publicación de Quarto:\n\nquarto publish\n\nQuarto renderiza el libro y sincroniza la carpeta generada (_book/) con la rama gh-pages del repositorio remoto.\nConfigura GitHub Pages en el repositorio:\n\n\n\nEn GitHub, accede a Settings &gt; Pages.\n\nSelecciona como fuente la rama gh-pages.\n\nGuarda la configuración para que el sitio quede publicado.\n\n\nLa URL pública suele ser:\n\nhttps://profechrisjara.github.io/SistemasOperativos_Tercero/",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a Quarto</span>"
+    ]
+  },
+  {
+    "objectID": "Introducción_Quarto.html#pasos-para-sincronizar-la-copia-local-con-github-usando-git",
+    "href": "Introducción_Quarto.html#pasos-para-sincronizar-la-copia-local-con-github-usando-git",
+    "title": "1  Introducción a Quarto",
+    "section": "6.1 Pasos para sincronizar la copia local con GitHub usando Git",
+    "text": "6.1 Pasos para sincronizar la copia local con GitHub usando Git\n\nAbrir la terminal integrada de VS Code y navegar a la carpeta raíz de tu proyecto:\n\ncd /ruta/a/SistemasOperativos_Tercero\n\nAgregar el repositorio remoto (si no está agregado):\n\ngit remote add origin https://github.com/profechrisjara/SistemasOperativos_Tercero.git\n\nNota: Si aparece el mensaje de error fatal: remote origin already exists., usa\ngit remote set-url origin https://github.com/profechrisjara/SistemasOperativos_Tercero.git\npara actualizar la URL del remoto.\n\n\nAgregar cambios al área de preparación (stage):\n\ngit add .\nEsto recoge todos los archivos modificados y nuevos para incluirlos en el próximo commit.\n\nCrear un commit con un mensaje descriptivo:\n\ngit commit -m \"Descripción breve de los cambios\"\nEsto guarda los cambios localmente en el historial de Git.\n\nEnviar los cambios al repositorio remoto (GitHub):\n\ngit push -u origin main\n\nSi la rama principal local se llama master, cambiar main por master.\n\n\nActualizar los cambios realizados en el repositorio remoto al entorno local:\nPara traer cambios realizados por otros colaboradores o desde GitHub:\n\ngit pull origin main\n\nVerificar el repositorio remoto configurado:\nPara asegurarte que tu proyecto local está apuntando al repositorio correcto:\n\ngit remote -v",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introducción a Quarto</span>"
     ]
   },
   {
@@ -27,16 +97,6 @@
     "text": "In summary, this book has no content whatsoever.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "References"
     ]
   }
 ]
